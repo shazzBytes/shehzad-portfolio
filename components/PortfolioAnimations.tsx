@@ -22,11 +22,13 @@ export default function PortfolioAnimations() {
         gsap.from(item, {
           y: 40,
           opacity: 0,
-          duration: 0.8,
+          duration: 1.2,
+          stagger: 0.2,
+          ease: "power2.out",
           scrollTrigger: {
             trigger: item,
-            start: "top 85%",
-            once: true,
+            start: "top 70%",
+            toggleActions: "play reverse play reverse"
           },
         });
       });
@@ -36,10 +38,11 @@ export default function PortfolioAnimations() {
           y: 30,
           opacity: 0,
           duration: 0.8,
+          ease: "power2.out",
           scrollTrigger: {
             trigger: item,
-            start: "top 85%",
-            once: true,
+            start: "top 70%",
+            toggleActions: "play reverse play reverse"
           },
         });
       });
